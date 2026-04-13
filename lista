@@ -1,0 +1,14 @@
+convidados = ["joao","maria","jose"]
+print(f"Lista inicial: {convidados}")
+adc_convid = input("Deseja adicionar mais convidados?(sim/não): ")
+
+if adc_convid == "sim":
+
+    convidados.append(input("Digite o nome do novo convidado: "))
+    print(convidados)
+
+print("Um dos convidados cancelou a presença")
+convidados.remove(input("digite o nome do usuario que faltou"))
+convidados.sort()
+print(convidados)
+print(f"quantidade de convidados: {len(convidados)}")

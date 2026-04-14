@@ -12,3 +12,18 @@ convidados.remove(input("digite o nome do usuario que faltou"))
 convidados.sort()
 print(convidados)
 print(f"quantidade de convidados: {len(convidados)}")
+
+
+
+
+///////
+
+
+list1 = ["a","c","e"]
+list2 = ["b","d","f"]
+list3 = []
+tam = len(list1)
+for i in range(tam):
+    list3.append(list1[i])
+    list3.append(list2[i])
+print(list3)    

@@ -27,3 +27,22 @@ for i in range(tam):
     list3.append(list1[i])
     list3.append(list2[i])
 print(list3)    
+
+
+//////////
+
+lista = []
+
+for i in range(5):
+    num = int(input("digite um numero: "))
+    lista.append(num)
+
+N = int(input("digite o numero de giros: "))
+
+for i in range(N):
+    ultimo = lista.pop()
+    lista.inser(0, ultimo)
+
+print(f"Lista final: {lista}")
+
+

@@ -1,0 +1,15 @@
+lista = [25, 14, 89, 7, 42, 95, 63, 95, 22]
+
+maior = float("-inf")
+segundo_maior = float("-inf")
+
+for num in lista:
+    if num > maior:
+        segundo_maior = maior
+        maior = num 
+    elif num > segundo_maior and num != maior:
+        segundo_maior = num
+
+
+print(f"maior = {maior}")
+print(f"segundo maior = {segundo_maior}")

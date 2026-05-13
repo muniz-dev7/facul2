@@ -1,0 +1,27 @@
+dados_alunos = [
+    "Ana Silva: 8.5, 9.0, 7.5",
+    "Bruno Costa: 6.0, 5.5, 7.0",
+    "Carla Dias: 9.5, 10.0, 9.0"
+]
+for aluno in dados_alunos:
+    
+    partes = aluno.split(":")
+    
+    nome = partes[0]
+    
+    notas_texto = partes[1].split(",")
+    
+    soma = 0
+    
+    for nota in notas_texto:
+
+        soma += float(nota)
+        
+    media = soma / len(notas_texto)
+
+    if media >= 7:
+        status = "Aprovado"
+    else:
+        status = "Reprovado"
+
+    print(nome, "| Média: ", round(media, 2), "| Status", status)   

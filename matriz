@@ -1,0 +1,11 @@
+matriz = [
+    ["x", "o", "o"],
+    ["x", "x", "o"],
+    ["o", "x", "o"]
+]
+
+for i in range(len(matriz)):
+    for j in range(len(matriz)):
+        print(matriz[i][j], end=" | ")
+
+    print("\n----------")

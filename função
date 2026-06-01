@@ -1,0 +1,13 @@
+def potencia(base, expoente):
+    resultado = 1
+    
+    for in range i in range(expoente):
+        resultado *= base
+
+    return resultado
+#exemplo de uso
+
+b = int(input("digite a base: "))
+e = int(input("digite o expoente: "))
+
+print (potencia(b, e))

@@ -1,3 +1,4 @@
+##########
 def potencia(base, expoente):
     resultado = 1
     
@@ -11,3 +12,63 @@ b = int(input("digite a base: "))
 e = int(input("digite o expoente: "))
 
 print (potencia(b, e))
+
+######## escreva uma função que receba dois falores notas e pesos em tuplas e calcule a média ponderada e retorne
+
+def media_ponderada(lista):
+    soma_notas = 0
+    soma_pesos = 0
+
+    for in range(len(lista)):
+        soma_notas += lista[i][o] * lista[i][1]
+        soma_pesos += lista[i][1]
+        media = soma_notas / soma_pesos
+        return media
+
+########## escreva uma função chamada filtrar por genero que receba uma lista de dicionários(onde cada dicionário representa um livro com título e genero) e uma string com genero alvo.
+
+def filtrar_por_genero(lista, genero_alvo):
+    livros = []
+    for i in range(len(lista)):
+        livro = lista[i]
+        if livro ["genero"] == genero_alvo:
+                livros.append(livro["titulo"])
+    return livros
+###########
+# Banco de dados de alunos
+bd_alunos = {}
+
+def adicionar_aluno(bd, matricula, nome, curso):
+    """
+    Adiciona um aluno ao banco de dados.
+    Retorna True se o aluno foi adicionado.
+    Retorna False se a matrícula já existir.
+    """
+    if matricula in bd:
+        return False
+
+    bd[matricula] = {
+        "nome": nome,
+        "curso": curso
+    }
+    return True
+
+
+def buscar_nome_curso(bd, matricula):
+    """
+    Retorna uma tupla (nome, curso) do aluno.
+    Se a matrícula não existir, retorna (None, None).
+    """
+    if matricula in bd:
+        return (bd[matricula]["nome"], bd[matricula]["curso"])
+
+    return (None, None)
+
+
+# Exemplos de uso
+print(adicionar_aluno(bd_alunos, 1001, "Ana", "Engenharia"))
+print(adicionar_aluno(bd_alunos, 1002, "Carlos", "Computação"))
+print(adicionar_aluno(bd_alunos, 1001, "Maria", "Medicina"))  # Matrícula já existe
+
+print(buscar_nome_curso(bd_alunos, 1001))
+print(buscar_nome_curso(bd_alunos, 1003))
